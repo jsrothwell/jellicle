@@ -18,49 +18,19 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="parallax-bg"></div>
 <div id="page" class="hfeed site">
-	<?php do_action( 'jellicle_before' ); ?>
-	<div id="header-top">
-		<header id="masthead" class="site-header row container" role="banner">
-			<div class="site-branding col-md-6 col-xs-12">
-			<?php if((of_get_option('logo', true) != "") && (of_get_option('logo', true) != 1) ) { ?>
-				<h1 class="site-title logo-container"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<?php
-				echo "<img class='main_logo' src='".of_get_option('logo', true)."' title='".esc_attr(get_bloginfo( 'name','display' ) )."'></a></h1>";	
-				}
-			else { ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> 
-			<?php	
-			}
-			?>
-			</div>	
-			
-			<?php get_template_part('social', 'fa'); ?>
-						
-		</header><!-- #masthead -->
-	</div>
-	
-	<div id="header-2">
-		<div class="container">
-		<div class="default-nav-wrapper col-md-8 col-xs-12"> 	
-		   <nav id="site-navigation" class="main-navigation" role="navigation">
-	         <div id="nav-container">
-				<h1 class="menu-toggle"></h1>
-				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'jellicle' ); ?>"><?php _e( 'Skip to content', 'jellicle' ); ?></a></div>
-	
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	          </div>  
-			</nav><!-- #site-navigation -->
-		  </div>
-		  
-		<div id="top-search" class="col-md-4 col-xs-12">
-			<?php get_search_form(); ?>
-		</div>
-		</div>
-	</div>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jellicle' ); ?></a>
 
-	<?php get_template_part('slider', 'nivo'); ?>
-	
-		<div id="content" class="site-content row clearfix clear">
-		<div class="container col-md-12"> 
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'jellicle' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
