@@ -9,9 +9,9 @@
 ?>
 
 	</div><!-- #content -->
-
+<hr class="col-xs-12" />
 	<footer id="colophon" class="site-footer col-xs-10 col-xs-offset-1" role="contentinfo">
-        <div class="social"><?php get_theme_mod( 'twitter' ); ?></div>
+        <div class="social"><a href=get_theme_mod( 'twitter' );><?php echo get_theme_mod( 'twitter' ); ?></div></a>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'jellicle' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'jellicle' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
