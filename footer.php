@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer col-xs-10 col-xs-offset-1" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'jellicle' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'jellicle' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

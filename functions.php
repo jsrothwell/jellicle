@@ -101,7 +101,6 @@ add_action( 'widgets_init', 'jellicle_widgets_init' );
  */
 function jellicle_scripts() {
 	wp_enqueue_style( 'jellicle-style', get_stylesheet_uri() );
-
 	wp_enqueue_script( 'jellicle-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'jellicle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -136,3 +135,33 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Bootstrap Navwalker. https://github.com/twittem/wp-bootstrap-navwalker 
+ */
+require_once('wp_bootstrap_navwalker.php');
+
+
+/**
+* Pagination
+**/
+function jellicle_pagination() {
+	global $wp_query;
+	$big = 12345678;
+	$page_format = paginate_links( array(
+	    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	    'format' => '?paged=%#%',
+	    'current' => max( 1, get_query_var('paged') ),
+	    'total' => $wp_query->max_num_pages,
+	    'type'  => 'array'
+	) );
+	if( is_array($page_format) ) {
+	            $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+	            echo '<div class="pagination"><div><ul>';
+	            echo '<li><span>'. $paged . ' of ' . $wp_query->max_num_pages .'</span></li>';
+	            foreach ( $page_format as $page ) {
+	                    echo "<li>$page</li>";
+	            }
+	           echo '</ul></div></div>';
+	 }
+}
