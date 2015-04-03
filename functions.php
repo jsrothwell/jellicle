@@ -203,3 +203,16 @@ add_action('comment_form', 'bootstrap3_comment_button' );
 function bootstrap3_comment_button() {
     echo '<button class="btn btn-default" type="submit">' . __( 'Submit' ) . '</button>';
 }
+
+add_action( 'init', 'cd_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function cd_add_editor_styles() {
+
+    add_editor_style( get_stylesheet_uri() );
+
+}
