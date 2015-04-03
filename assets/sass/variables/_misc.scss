@@ -1,0 +1,212 @@
+/* 8. Pagination
+-----------------------------------------------*/
+.pagination {
+  margin: 20px 0;
+  width: 100%;
+  margin-left: -20px;
+  text-align: center;
+  clear: both;
+}
+.pagination ul {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0;
+}
+.pagination ul > li {
+  display: inline;
+}
+.pagination ul > li > a {
+  color: #eeeeee;
+  transition: all 0.4s ease;
+}
+.pagination ul > li > a .next {
+  float: right;
+}
+.pagination ul > li > a:hover {
+  color: #00bac4;
+  background: #eee;
+}
+.pagination .current {
+  background: #00d2de;
+}
+.pagination ul  > li  > a,
+.pagination ul  > li  > span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: solid 1px #f1f1f1;
+  border-left-width: 0;
+  display: inline-block;
+  color: #27979d;
+}
+.pagination ul  > li:first-child  > a,
+.pagination ul  > li:first-child  > span {
+  border-left-width: 1px;
+}
+.pagination ul  > li:last-child  > a,
+.pagination ul  > li:last-child  > span {
+  border-right-width: 1px;
+}
+
+/* 7.2 Secondary
+------------------------------------------------------- */
+#secondary,
+#footer-sidebar {
+  padding: 20px 10px;
+}
+#secondary ul,
+#footer-sidebar ul {
+  list-style: none;
+  margin-left: 5px;
+}
+#secondary ul li:before,
+#footer-sidebar ul li:before {
+  margin-right: 5px;
+  content: "\f0da";
+  font-family: "FontAwesome";
+  color: #999999;
+}
+#secondary ul li,
+#footer-sidebar ul li {
+  margin-bottom: 8px;
+}
+#secondary ul ul,
+#footer-sidebar ul ul {
+  margin-left: 15px;
+}
+#secondary ul ul li:before,
+#footer-sidebar ul ul li:before {
+  content: "\f111";
+  font-size: 5px;
+  position: relative;
+  top: -3px;
+}
+#secondary ul ul ul,
+#footer-sidebar ul ul ul {
+  margin-left: 5px;
+}
+#secondary .widget_recent_entries li:before,
+#footer-sidebar .widget_recent_entries li:before {
+  content: "\f0f6";
+}
+#secondary .widget_recent_entries li,
+#footer-sidebar .widget_recent_entries li {
+  border-bottom: solid 1px #ffffff;
+  padding: 5px 0px;
+}
+#secondary .widget_recent_comments li:before,
+#footer-sidebar .widget_recent_comments li:before {
+  content: "\f075";
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+#secondary .widget_calendar caption,
+#footer-sidebar .widget_calendar caption {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+#secondary .widget_calendar table,
+#footer-sidebar .widget_calendar table {
+  padding: 5px;
+  text-align: center;
+  background: #fff;
+}
+#secondary .widget_calendar thead,
+#footer-sidebar .widget_calendar thead {
+  border-bottom: solid 1px #00d2de;
+}
+#secondary .widget_calendar thead th,
+#footer-sidebar .widget_calendar thead th {
+  background: #ddd;
+  padding: 5px;
+  text-align: center;
+}
+#secondary .widget_calendar tr td,
+#footer-sidebar .widget_calendar tr td {
+  padding: 8px !important;
+  background: #eee;
+  margin: 4px;
+  text-align: center;
+}
+#secondary .widget_calendar #prev,
+#footer-sidebar .widget_calendar #prev {
+  text-align: left;
+}
+#secondary .widget_calendar #next,
+#footer-sidebar .widget_calendar #next {
+  text-align: right;
+}
+#secondary h1.widget-title,
+#footer-sidebar h1.widget-title {
+  font-size: 25px;
+  font-weight: normal;
+  border-bottom: solid 4px #d9d9d9;
+  padding: 5px;
+  margin-top: 0px;
+  //color: #00bac4;
+  //font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+#secondary .widget_search label,
+#footer-sidebar .widget_search label {
+  width: 100%;
+}
+#secondary .widget_search form,
+#footer-sidebar .widget_search form {
+  width: 100%;
+  padding: 10px 5px;
+}
+#secondary .widget_search input[type=submit],
+#footer-sidebar .widget_search input[type=submit] {
+  display: none;
+}
+#secondary .widget_search input[type=text],
+#footer-sidebar .widget_search input[type=text] {
+  display: block;
+  min-width: 96%;
+  margin-left: 20px;
+}
+#secondary select#cat,
+#footer-sidebar select#cat {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+#secondary .widget,
+#footer-sidebar .widget {
+  background: #fff;
+  margin-top: 15px;
+  padding-top: 0px;
+  padding: 10px;
+  border: solid 1px #eee;
+}
+#secondary .widget a,
+#footer-sidebar .widget a {
+  color: #999999;
+}
+#secondary .widget > div,
+#footer-sidebar .widget > div {
+  padding: 7px;
+}
+
+.form-submit {
+  display: none;
+}
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  width: 50%;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top:30px;
+}
+
+#content    {
+  margin-top:20px;
+  clear:both;
+}

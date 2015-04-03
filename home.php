@@ -14,15 +14,15 @@
 get_header(); ?>
 
 	<div id="primary-home" class="content-area col-md-12">
-		<main id="main" class="site-main row container" role="main">
+		<main id="main" class="site-main row container col-md-12" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ $ink_count = 0; $ink_row_count=0 ?>
-			<?php while ( have_posts() ) : the_post(); 
+			<?php while ( have_posts() ) : the_post();
 				if ($ink_count == 0 ) {echo "<div class='row-".$ink_row_count." row'>";}
 			?>
-			
+
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
@@ -32,18 +32,18 @@ get_header(); ?>
 					get_template_part( 'content', 'home' );
 				?>
 
-			<?php 
+			<?php
 				if ($ink_count == 2 )
 					{
 						echo "</div>";
 						$ink_count=0;
 						$ink_row_count++;
 					}
-				else {	
+				else {
 					$ink_count++;
 				}
-				
-				endwhile; 
+
+				endwhile;
 			?>
 
 			<?php jellicle_pagination(); ?>
