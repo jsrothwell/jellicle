@@ -1,1 +1,3 @@
-main#main.row  {  margin-top:100px; }
+main#main.row, main#main.site-main, div#secondary  {  margin-top:100px; }
+.search-submit  {  @extend .btn;  }
+.search-submit  { @extend .btn-primary;  }

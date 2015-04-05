@@ -198,10 +198,10 @@ function bootstrap3_comment_form( $args ) {
 	return $args;
 }
 
-add_action('comment_form', 'bootstrap3_comment_button' );
-function bootstrap3_comment_button() {
-	echo '<button class="btn btn-default" type="submit">' . __( 'Submit' ) . '</button>';
-}
+//add_action('comment_form', 'bootstrap3_comment_button' );
+//function bootstrap3_comment_button() {
+//	echo '<button class="btn btn-default" //type="submit">' . __( 'Submit' ) . '</button>';
+//}
 
 add_action( 'init', 'cd_add_editor_styles' );
 /**

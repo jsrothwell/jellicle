@@ -43,18 +43,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   12.2 Galleries
 --------------------------------------------------------------*/
 
+@import "base/variables";
+@import "base/placeholders";
+@import "base/mixins";
 @import "variables/normalize";
 @import "bootstrap";
-//@import "variables/typography";
-//@import "variables/elements";
-//@import "variables/forms";
-//@import "variables/navigation";
 @import "variables/accessibility";
-//@import "variables/alignment";
-//@import "variables/clearing";
-//@import "variables/widgets";
-//@import "variables/content";
-//@import "variables/infinite-scroll";
-//@import "variables/media";
-//@import "variables/misc";
 @import "variables/shame";

@@ -17,7 +17,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(container); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jellicle' ); ?></a>
 
@@ -58,4 +58,4 @@ wp_nav_menu(array(
 </nav><!– #site-navigation –>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content content col-xs-10 col-xs-offset-1">
+	<div id="content" class="site-content content col-xs-12">

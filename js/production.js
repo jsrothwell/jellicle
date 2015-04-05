@@ -11,3 +11,7 @@ b._beforeUpdate(a,b._groups);d.each(b._groups,function(){b._apply(this.elements,
 jQuery(document).ready(function($){
   $('.content, .sidebar').matchHeight();
 });
+
+jQuery(document).ready(function($) { //noconflict wrapper
+  $('input#submit').addClass('btn btn-primary');
+});//end noconflict
